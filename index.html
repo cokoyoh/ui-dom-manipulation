@@ -7,11 +7,18 @@
   <title>About elk</title>
 </head>
 <body>
-    The truth about elk.
-    <ol>
-      <li>An elk is a smart</li>
-      <!-- comment -->
-      <li>...and cunning animal</li>
-    </ol>
-</body>
-</html>
+  <div>Begin</div>
+
+  <ul>
+    <li>Information</li>
+  </ul>
+
+  <div>End</div>
+
+  <script>
+    for (let i = 0; i < document.body.childNodes.length; i++) {
+      alert( document.body.childNodes[i] ); // Text, DIV, Text, UL, ..., SCRIPT
+    }
+  </script>
+  </body>
+  </html>
