@@ -16,8 +16,12 @@
   <div>End</div>
 
   <script>
-    for (let i = 0; i < document.body.childNodes.length; i++) {
-      alert( document.body.childNodes[i] ); // Text, DIV, Text, UL, ..., SCRIPT
+    // for (let i = 0; i < document.body.childNodes.length; i++) {
+    //   alert( document.body.childNodes[i] ); // Text, DIV, Text, UL, ..., SCRIPT
+    // }
+
+    for(const elem of document.body.children) {
+      alert(elem); // div, ul, div script
     }
   </script>
   </body>
