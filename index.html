@@ -15,14 +15,23 @@
 
   <div>End</div>
 
+  <div id="elem">
+    <div id="elem-content">
+      Element
+    </div>
+  </div>
+
   <script>
     // for (let i = 0; i < document.body.childNodes.length; i++) {
     //   alert( document.body.childNodes[i] ); // Text, DIV, Text, UL, ..., SCRIPT
     // }
 
-    for(const elem of document.body.children) {
-      alert(elem); // div, ul, div script
-    }
+    // for(const elem of document.body.children) {
+    //   alert(elem); // div, ul, div script
+    // }
+
+    const elem = document.getElementById('elem');
+    elem.style.background = 'red';
   </script>
   </body>
   </html>

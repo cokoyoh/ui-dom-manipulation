@@ -14,3 +14,5 @@ setTimeout(() => document.body.style.background = '', 5000);
  *  the last selected DOM element is available at $0, the previously selected is $1
  */
 $0.style.background = 'red'; //changes the last element's background to red
+
+setTimeout(() => console.log('here we go killing again'), 100)
