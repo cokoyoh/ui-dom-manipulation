@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="index.js"></script>
   <title>About elk</title>
 </head>
+
 <body>
   <div>Begin</div>
 
@@ -21,6 +23,12 @@
     </div>
   </div>
 
+  <form name="my-form">
+    <div class="article">Article</div>
+    <div class="long article">Long article</div>
+  </form>
+
+
   <script>
     // for (let i = 0; i < document.body.childNodes.length; i++) {
     //   alert( document.body.childNodes[i] ); // Text, DIV, Text, UL, ..., SCRIPT
@@ -30,8 +38,20 @@
     //   alert(elem); // div, ul, div script
     // }
 
-    const elem = document.getElementById('elem');
-    elem.style.background = 'red';
+    // const elem = document.getElementById('elem');
+    // elem.style.background = 'red';
+
+    const form = document.getElementsByName('my-form')[0];
+
+    const articles = form.getElementsByClassName('article');
+
+    for(const article of articles) {
+      console.log(article.innerHTML);
+    }
+
+    alert(articles.length);
+
   </script>
-  </body>
-  </html>
+</body>
+
+</html>
