@@ -9,48 +9,15 @@
 </head>
 
 <body>
-  <div>Begin</div>
-
-  <ul>
-    <li>Information</li>
-  </ul>
-
-  <div>End</div>
-
-  <div id="elem">
-    <div id="elem-content">
-      Element
-    </div>
-  </div>
-
-  <form name="my-form">
-    <div class="article">Article</div>
-    <div class="long article">Long article</div>
-  </form>
-
-
+  <!-- Add an input element and a button, select the text in the input on click of button -->
+  <input id="input-select" defaultValue="hocus pocus" type="text" value="hocus pocus string">
+  <button onclick="selectText()">Select Text</button>
   <script>
-    // for (let i = 0; i < document.body.childNodes.length; i++) {
-    //   alert( document.body.childNodes[i] ); // Text, DIV, Text, UL, ..., SCRIPT
-    // }
-
-    // for(const elem of document.body.children) {
-    //   alert(elem); // div, ul, div script
-    // }
-
-    // const elem = document.getElementById('elem');
-    // elem.style.background = 'red';
-
-    const form = document.getElementsByName('my-form')[0];
-
-    const articles = form.getElementsByClassName('article');
-
-    for(const article of articles) {
-      console.log(article.innerHTML);
+    var input = document.getElementById('input-select');
+    function selectText() {
+      input.focus();
+      input.select();
     }
-
-    alert(articles.length);
-
   </script>
 </body>
 
