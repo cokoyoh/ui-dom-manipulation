@@ -9,15 +9,13 @@
 </head>
 
 <body>
-  <!-- Add an input element and a button, select the text in the input on click of button -->
-  <input id="input-select" defaultValue="hocus pocus" type="text" value="hocus pocus string">
-  <button onclick="selectText()">Select Text</button>
+  <!-- Get and change the content of a page using innerHTML -->
+  <p>A paragraph</p>
+  <div>A div</div>
+
   <script>
-    var input = document.getElementById('input-select');
-    function selectText() {
-      input.focus();
-      input.select();
-    }
+    console.log(document.body.innerHTML);
+    document.body.innerHTML = 'The new BODY!'; // this is called parsing -> changing a string into a dom element
   </script>
 </body>
 

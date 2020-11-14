@@ -4,10 +4,10 @@
 //   location = 'https://wikipedia.org'; 
 // } 
 
-document.body.style.background = 'red';
+// document.body.style.background = 'red';
 
 // clear after 3 seconds
-setTimeout(() => document.body.style.background = '', 5000);
+// setTimeout(() => document.body.style.background = '', 5000);
 
 /**
  * Notes
