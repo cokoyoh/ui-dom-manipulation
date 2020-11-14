@@ -9,13 +9,19 @@
 </head>
 
 <body>
-  <!-- Get and change the content of a page using innerHTML -->
-  <p>A paragraph</p>
-  <div>A div</div>
+  <div>Hello, world!</div>
 
   <script>
-    console.log(document.body.innerHTML);
-    document.body.innerHTML = 'The new BODY!'; // this is called parsing -> changing a string into a dom element
+    const div = document.querySelector('div');
+    console.log(div.outerHTML);
+
+    // Replave div.outerHTML with <p>...</p>
+
+    div.outerHTML = `<p>A new element </p>`
+
+    console.log('checking div content after replacement');
+    console.log(div.outerHTML);
+
   </script>
 </body>
 
