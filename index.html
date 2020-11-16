@@ -9,15 +9,14 @@
 </head>
 
 <body>
-  <!-- Add an input element and a button, select the text in the input on click of button -->
-  <input id="input-select" defaultValue="hocus pocus" type="text" value="hocus pocus string">
-  <button onclick="selectText()">Select Text</button>
+  <div id="elem1"></div>
+  <div id="elem2"></div>
+
   <script>
-    var input = document.getElementById('input-select');
-    function selectText() {
-      input.focus();
-      input.select();
-    }
+    // textContent v innerHTML
+    const name = prompt(`What's your name?`, `<b>You-know-who</b>`);
+    elem1.innerHTML = name;
+    elem2.textContent = name;
   </script>
 </body>
 
