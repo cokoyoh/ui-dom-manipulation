@@ -9,14 +9,11 @@
 </head>
 
 <body>
-  <div id="elem1"></div>
-  <div id="elem2"></div>
+   <div id="elem">A blinking element</div>
 
   <script>
-    // textContent v innerHTML
-    const name = prompt(`What's your name?`, `<b>You-know-who</b>`);
-    elem1.innerHTML = name;
-    elem2.textContent = name;
+    // Demo hidden property
+    setInterval(() => elem.hidden = !elem.hidden, 1000);
   </script>
 </body>
 
