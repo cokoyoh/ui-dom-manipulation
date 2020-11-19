@@ -8,16 +8,21 @@
   <title>About elk</title>
 </head>
 
-<body>
-   <div id="elem">A blinking element</div>
-   <input type="text" id="cokoyoh" value="you-know-who">
-
+<body something="non-standard-attribute">
+  <div id="elem" about="Elephant">Hocus Pocus!!</div>
   <script>
-    // Demo hidden property
-    // setInterval(() => elem.hidden = !elem.hidden, 1000);
-    console.log(cokoyoh.type);
-    console.log(cokoyoh.id);
-    console.log(cokoyoh.value);
+    // Demo getting standard and non standard attributes
+    console.log(elem.getAttribute('about'));
+    console.log(document.body.getAttribute('something'));
+
+    elem.setAttribute('test', 123);
+    console.log('checking if the attribute is in the html');
+    console.log(elem.outerHTML);
+
+    console.log('all elem attributes');
+    for(const attribute of elem.attributes) {
+      console.log(`${attribute.name} = ${attribute.value}`);
+    }
   </script>
 </body>
 
