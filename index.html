@@ -10,6 +10,7 @@
 
 <body something="non-standard-attribute">
   <div id="elem" about="Elephant">Hocus Pocus!!</div>
+  <input type="text" value="some input elem">
   <script>
     // Demo getting standard and non standard attributes
     console.log(elem.getAttribute('about'));
@@ -23,6 +24,15 @@
     for(const attribute of elem.attributes) {
       console.log(`${attribute.name} = ${attribute.value}`);
     }
+
+    //demo property-attribute synchnonization
+    const input = document.querySelector('input');
+    input.setAttribute('id', 'id');
+    console.log(input.id);
+
+    //set a new property value
+    input.id = 'newId';
+    console.log(input.getAttribute('id'));
   </script>
 </body>
 
