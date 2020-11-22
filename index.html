@@ -7,15 +7,15 @@
   <script src="index.js"></script>
   <title>About elk</title>
   <style>
-    .order[order-state="new"] {
+    .order[data-order-state="new"] {
       color: green;
     }
 
-    .order[order-state="pending"] {
+    .order[data-order-state="pending"] {
       color: blue;
     }
 
-    .order[order-state="cancelled"] {
+    .order[data-order-state="cancelled"] {
       color: red;
     }
   </style>
@@ -28,9 +28,9 @@
   <div show-info="age"></div>
 
   <!-- Using non-standard attributes to style elements -->
-  <div class="order" order-state="new">A new order</div>
-  <div class="order" order-state="pending">A pending order</div>
-  <div class="order" order-state="cancelled">A cancelled order</div>
+  <div id="order" class="order" data-order-state="new">A new order</div>
+  <div class="order" data-order-state="pending">A pending order</div>
+  <div class="order" data-order-state="cancelled">A cancelled order</div>
   <script>
     // Demo no standard attributes used for data sets
     // Find the element with the mark and show what's requested
@@ -43,6 +43,10 @@
       const field = div.getAttribute('show-info');
       div.innerHTML = user[field];
     }
+
+    setInterval(() => {
+      order.dataset.orderState = 'pending';
+    }, 1000);
   </script>
 </body>
 
