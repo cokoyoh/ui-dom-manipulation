@@ -6,6 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="index.js"></script>
   <title>About elk</title>
+  <style>
+    .order[order-state="new"] {
+      color: green;
+    }
+
+    .order[order-state="pending"] {
+      color: blue;
+    }
+
+    .order[order-state="cancelled"] {
+      color: red;
+    }
+  </style>
 </head>
 
 <body something="non-standard-attribute">
@@ -13,6 +26,11 @@
   <!-- mark div to show name and age here -->
   <div show-info="name"></div>
   <div show-info="age"></div>
+
+  <!-- Using non-standard attributes to style elements -->
+  <div class="order" order-state="new">A new order</div>
+  <div class="order" order-state="pending">A pending order</div>
+  <div class="order" order-state="cancelled">A cancelled order</div>
   <script>
     // Demo no standard attributes used for data sets
     // Find the element with the mark and show what's requested
